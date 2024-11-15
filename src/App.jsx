@@ -12,6 +12,7 @@ function App() {
         Share and navigate Data Structures and algorithms question to prepare
         for your technical interviews
       </p>
+      <img className="app-logo" src="./src/assets/algo-forum-2.png"></img>
     </>
   );
 }

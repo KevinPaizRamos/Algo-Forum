@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { supabase } from "../client";
-import PostCard from "./post-card";
 
 const CreatePost = () => {
   const [post, setPost] = useState({

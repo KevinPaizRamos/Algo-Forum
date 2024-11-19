@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { supabase } from "../client";
+import PostCard from "./post-card";
 
 const CreatePost = () => {
   const [post, setPost] = useState({
@@ -35,17 +36,33 @@ const CreatePost = () => {
     <div className="create-post">
       <h1>Create Post </h1>
       <form className="post-form">
-        <input type="text" placeholder="Title" onChange={handleChange} />
         <input
+          name="title"
+          type="text"
+          placeholder="title"
+          onChange={handleChange}
+        />
+        <input
+          name="description"
           onChange={handleChange}
           type="text"
           className="description"
           placeholder="description"
         />
-        <input onChange={handleChange} type="text" placeholder="solution" />
-        <input onChange={handleChange} type="text" placeholder="Image URL" />
+        <input
+          name="solution"
+          onChange={handleChange}
+          type="text"
+          placeholder="solution"
+        />
+        <input
+          name="image"
+          onChange={handleChange}
+          type="text"
+          placeholder="Image URL"
+        />
       </form>
-      <button onSubmit={createPost}>Post</button>
+      <button onClick={createPost}>Post</button>
     </div>
   );
 };

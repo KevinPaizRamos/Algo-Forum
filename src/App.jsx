@@ -1,6 +1,7 @@
 import { useState } from "react";
 import CreatePost from "./components/create-post";
 import "./App.css";
+import PostCard from "./components/post-card";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -14,7 +15,7 @@ function App() {
       </p>
       <img className="app-logo" src="./src/assets/algo-forum-2.png"></img>
 
-      <CreatePost />
+      <PostCard />
     </>
   );
 }

@@ -22,8 +22,8 @@ body {
   margin: 0 auto;
   background-color: white;
   border-radius: 10px;
-  height: auto;
-  width: auto;
+  height: 450px;
+  width: 600px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 .create-post h1 {
@@ -61,4 +61,8 @@ body {
   border-radius: 5px;
   border: 1px solid #5f43b2;
   height: 50px;
+}
+
+.card-container {
+  background-color: white;
 }

@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import CreatePost from "./components/create-post";
 import "./App.css";
 
 function App() {
@@ -9,10 +9,12 @@ function App() {
     <>
       <h1>Algo Forum</h1>
       <p>
-        Share and navigate Data Structures and algorithms question to prepare
-        for your technical interviews
+        Share your most recent data Structures and algorithms questions that you
+        have recently solved.
       </p>
       <img className="app-logo" src="./src/assets/algo-forum-2.png"></img>
+
+      <CreatePost />
     </>
   );
 }

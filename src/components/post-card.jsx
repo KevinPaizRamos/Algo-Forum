@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import { supabase } from "../client";
+import Card from "./card";
 
 const PostCard = (props) => {
   const [posts, setPost] = useState([]);
@@ -18,17 +19,15 @@ const PostCard = (props) => {
 
   return (
     <div className="post-card">
-      <div className="card-container">
-        {posts && posts.length > 0 ? (
-          posts.map((posts) => (
-            <div key={posts.id}>
-              <h1>{posts.title}</h1>
-            </div>
-          ))
-        ) : (
-          <h1>No posts available</h1>
-        )}
-      </div>
+      {posts && posts.length > 0 ? (
+        posts.map((posts) => (
+          <div key={posts.id}>
+            <Card title={posts.title} />
+          </div>
+        ))
+      ) : (
+        <h1>No posts available</h1>
+      )}
 
       <h1></h1>
     </div>

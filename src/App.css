@@ -115,6 +115,11 @@ body {
   background-color: #7b63d1;
 }
 
-.content {
-  padding: 20px;
+.post {
+  background-color: white;
+  position: fixed;
+  left: 10px;
+  right: 10px;
+  top: 100px;
+  justify-content: left;
 }

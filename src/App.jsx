@@ -13,8 +13,6 @@ function App() {
         Share your most recent data Structures and algorithms questions that you
         have recently solved.
       </p>
-
-      <PostCard />
     </>
   );
 }

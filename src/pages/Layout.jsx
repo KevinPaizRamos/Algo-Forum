@@ -14,7 +14,7 @@ const Layout = () => {
     async function fetchPosts() {
       const { data } = await supabase
         .from("posts")
-        .select("title, description, solution, image")
+        .select("*")
         .order("created_at", { ascending: true });
       setPosts(data);
       setFilteredPosts(data); // Initialize filteredPosts with all posts
@@ -64,7 +64,11 @@ const Layout = () => {
           {filteredPosts.length > 0 ? (
             filteredPosts.map((post, index) => (
               <div key={index} className="card">
-                <Card title={post.title} />
+                <Card
+                  title={post.title}
+                  upvotes={post.upvotes}
+                  time={post.created_at}
+                />
               </div>
             ))
           ) : (

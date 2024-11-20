@@ -1,6 +1,6 @@
 import React from "react";
 
-const Card = ({ time, title, upvotes }) => {
+const Card = ({ time, title, upvotes, onClick }) => {
   return (
     <div className="card">
       <h4>{time}</h4>

@@ -8,7 +8,6 @@ function App() {
 
   return (
     <>
-      <h1>Algo Forum</h1>
       <p>
         Share your most recent data Structures and algorithms questions that you
         have recently solved.

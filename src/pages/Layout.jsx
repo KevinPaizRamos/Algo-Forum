@@ -59,6 +59,8 @@ const Layout = () => {
         </div>
       </nav>
 
+      <div className="information"></div>
+
       <Outlet />
       {location.pathname === "/" && (
         <div className="post-list">

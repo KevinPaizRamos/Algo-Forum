@@ -130,6 +130,30 @@ body {
   color: black;
 }
 
+.upvote {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 10px;
+}
+
+.upvote button {
+  color: #5f43b2;
+  border: 1px solid #5f43b2;
+}
+
+.upvote button:hover {
+  background-color: #5f43b2;
+  color: white;
+}
+
+.edit-delete-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-left: 10px;
+}
+
 .comment {
   background-color: rgba(227, 168, 250, 0.418);
   border-radius: 10px;

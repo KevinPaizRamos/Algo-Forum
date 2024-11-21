@@ -64,6 +64,26 @@ const Post = () => {
     }
   };
 
+  const handleUpvote = async () => {
+    try {
+      const { data, error } = await supabase
+        .from("posts")
+        .update({ upvotes: post.upvotes + 1 })
+        .eq("id", id)
+        .select();
+
+      if (error) {
+        throw error;
+      }
+
+      setPost(data[0]);
+    } catch (error) {
+      console.error("Error updating upvotes:", error);
+    }
+  };
+
+  const handleDelete = async () => {};
+
   if (!post) {
     return <div>Loading...</div>;
   }
@@ -75,6 +95,17 @@ const Post = () => {
       <p>{post.description}</p>
       <h4>Solution:</h4>
       <p>{post.solution}</p>
+      <br />
+      <div className="upvote">
+        <span>{post.upvotes} Upvotes</span>
+        <button onClick={handleUpvote}>Upvote</button>
+
+        <div className="edit-delete-buttons">
+          <button>Edit</button>
+          <button>Delete</button>
+        </div>
+      </div>
+
       <br />
       <div className="comment">
         <h2>Comments</h2>

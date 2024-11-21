@@ -117,10 +117,9 @@ body {
 
 .post {
   background-color: white;
-  position: fixed;
-  left: 100px;
-  right: 100px;
-  top: 100px;
+  position: relative;
+  margin: 100px auto; /* Center the post and add top margin */
+  width: 80%; /* Adjust width as needed */
   justify-content: left;
   color: #5f43b2;
   padding: 20px;
@@ -145,13 +144,14 @@ body {
   margin: 0;
 }
 
+.comment li {
+  color: rgb(59, 58, 58);
+  margin-bottom: 0.5rem;
+}
+
 .comment input {
   width: 98%;
   padding: 0.5rem;
   border-radius: 5px;
   border: 1px solid #5f43b2;
-}
-
-.comment p {
-  color: rgb(59, 58, 58);
 }

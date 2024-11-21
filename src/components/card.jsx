@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const Card = ({ time, title, upvotes, onClick }) => {
+const Card = ({ time, title, upvotes, onClick, linkTo }) => {
   return (
     <div className="card">
       <h4>{time}</h4>
-      <h2>{title}</h2>
+      <Link to={linkTo}>{title}</Link>
       <h4>{upvotes}</h4>
     </div>
   );

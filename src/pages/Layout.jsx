@@ -65,6 +65,7 @@ const Layout = () => {
             filteredPosts.map((post, index) => (
               <div key={index} className="card">
                 <Card
+                  linkTo={`/post/${post.id}`}
                   title={post.title}
                   upvotes={post.upvotes}
                   time={post.created_at}

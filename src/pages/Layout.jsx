@@ -15,7 +15,7 @@ const Layout = () => {
       const { data } = await supabase
         .from("posts")
         .select("*")
-        .order("created_at", { ascending: true });
+        .order("created_at", { ascending: false });
       setPosts(data);
       setFilteredPosts(data); // Initialize filteredPosts with all posts
     }
@@ -58,6 +58,7 @@ const Layout = () => {
           </Link>
         </div>
       </nav>
+
       <Outlet />
       {location.pathname === "/" && (
         <div className="post-list">
